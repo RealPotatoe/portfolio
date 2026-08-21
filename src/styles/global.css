@@ -8,7 +8,8 @@
     --color-ink: #241c18;
     --color-paper: #fff5ee;
     --color-surface: #ffffff;
-    --color-slate: #8a7b72;
+    /* Darkened from #8a7b72 to clear WCAG AA 4.5:1 at body text sizes. */
+    --color-slate: #7a6d65;
     --color-edge: #ede0d6;
     --color-cyan: #0e93a0;
     --color-coral: #ff7f50;
