@@ -16,8 +16,7 @@
         {
             "description": "Astro and its integrations",
             "groupName": "astro",
-            "matchPackageNames": ["astro"],
-            "matchPackagePrefixes": ["@astrojs/"]
+            "matchPackageNames": ["astro", "@astrojs/**", "@sveltejs/vite-plugin-svelte"]
         },
         {
             "description": "Tailwind and its plugins",
