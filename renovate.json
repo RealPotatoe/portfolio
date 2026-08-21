@@ -4,7 +4,8 @@
         "config:recommended",
         ":dependencyDashboard",
         ":semanticCommits",
-        "schedule:weekly"
+        "schedule:weekly",
+        "helpers:pinGitHubActionDigests"
     ],
     "timezone": "Europe/Berlin",
     "prConcurrentLimit": 5,
