@@ -1,38 +1,38 @@
 ---
-import { languages, type Lang } from '../i18n/ui';
-import { useTranslations } from '../i18n/utils';
+import { languages, type Lang } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
 
 interface Props {
-  lang: Lang;
+    lang: Lang;
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-const hrefs: Record<Lang, string> = { en: '/', de: '/de/' };
+const hrefs: Record<Lang, string> = { en: "/", de: "/de/" };
 ---
 
 <div
-  class="flex overflow-hidden rounded-full border border-edge text-xs font-semibold"
-  role="group"
-  aria-label={t('lang.label')}
+    class="flex overflow-hidden rounded-full border border-edge text-xs font-semibold"
+    role="group"
+    aria-label={t("lang.label")}
 >
-  {
-    Object.entries(languages).map(([code, label]) => {
-      const isActive = code === lang;
-      return (
-        <a
-          href={hrefs[code as Lang]}
-          hreflang={code}
-          aria-current={isActive ? 'true' : undefined}
-          class:list={[
-            'px-3 py-1.5 transition-colors duration-200',
-            isActive ? 'bg-coral text-on-coral' : 'text-slate hover:text-coral-text',
-          ]}
-        >
-          {label}
-        </a>
-      );
-    })
-  }
+    {
+        Object.entries(languages).map(([code, label]) => {
+            const isActive = code === lang;
+            return (
+                <a
+                    href={hrefs[code as Lang]}
+                    hreflang={code}
+                    aria-current={isActive ? "true" : undefined}
+                    class:list={[
+                        "px-3 py-1.5 transition-colors duration-200",
+                        isActive ? "bg-coral text-on-coral" : "text-slate hover:text-coral-text",
+                    ]}
+                >
+                    {label}
+                </a>
+            );
+        })
+    }
 </div>

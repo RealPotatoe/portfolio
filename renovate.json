@@ -1,61 +1,44 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    ":dependencyDashboard",
-    ":semanticCommits",
-    "schedule:weekly"
-  ],
-  "timezone": "Europe/Berlin",
-  "prConcurrentLimit": 5,
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": [
-      "before 5am on monday"
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":dependencyDashboard",
+        ":semanticCommits",
+        "schedule:weekly"
+    ],
+    "timezone": "Europe/Berlin",
+    "prConcurrentLimit": 5,
+    "lockFileMaintenance": {
+        "enabled": true,
+        "schedule": ["before 5am on monday"]
+    },
+    "packageRules": [
+        {
+            "description": "Astro and its integrations",
+            "groupName": "astro",
+            "matchPackageNames": ["astro"],
+            "matchPackagePrefixes": ["@astrojs/"]
+        },
+        {
+            "description": "Tailwind and its plugins",
+            "groupName": "tailwind",
+            "matchPackageNames": ["tailwindcss", "@tailwindcss/**"]
+        },
+        {
+            "description": "GitHub Actions",
+            "groupName": "github-actions",
+            "matchManagers": ["github-actions"]
+        },
+        {
+            "description": "Auto-merge devDependency patches",
+            "matchDepTypes": ["devDependencies"],
+            "matchUpdateTypes": ["patch"],
+            "automerge": true
+        },
+        {
+            "description": "Matches the peer range of @astrojs/check, which TypeScript 7 breaks",
+            "matchPackageNames": ["typescript"],
+            "allowedVersions": "^5.0.0 || ^6.0.0"
+        }
     ]
-  },
-  "packageRules": [
-    {
-      "description": "Astro and its integrations",
-      "groupName": "astro",
-      "matchPackageNames": [
-        "astro"
-      ],
-      "matchPackagePrefixes": [
-        "@astrojs/"
-      ]
-    },
-    {
-      "description": "Tailwind and its plugins",
-      "groupName": "tailwind",
-      "matchPackageNames": [
-        "tailwindcss",
-        "@tailwindcss/**"
-      ]
-    },
-    {
-      "description": "GitHub Actions",
-      "groupName": "github-actions",
-      "matchManagers": [
-        "github-actions"
-      ]
-    },
-    {
-      "description": "Auto-merge devDependency patches",
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "automerge": true
-    },
-    {
-      "description": "Matches the peer range of @astrojs/check, which TypeScript 7 breaks",
-      "matchPackageNames": [
-        "typescript"
-      ],
-      "allowedVersions": "^5.0.0 || ^6.0.0"
-    }
-  ]
 }

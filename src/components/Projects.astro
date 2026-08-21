@@ -1,60 +1,64 @@
 ---
-import { getCollection } from 'astro:content';
-import type { Lang } from '../i18n/ui';
-import { useTranslations, pick } from '../i18n/utils';
-import SectionHeading from './SectionHeading.astro';
+import { getCollection } from "astro:content";
+import type { Lang } from "../i18n/ui";
+import { useTranslations, pick } from "../i18n/utils";
+import SectionHeading from "./SectionHeading.astro";
 
 interface Props {
-  lang: Lang;
+    lang: Lang;
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <section id="projects" class="reveal py-24">
-  <div class="mx-auto max-w-6xl px-8">
-    <SectionHeading title={t('projects.title')} center />
+    <div class="mx-auto max-w-6xl px-8">
+        <SectionHeading title={t("projects.title")} center />
 
-    <div class="grid gap-8 lg:grid-cols-3">
-      {
-        projects.map(({ data }) => (
-          <article class="flex flex-col rounded-md border border-edge bg-surface p-8 shadow-card transition-transform duration-200 hover:-translate-y-1">
-            <i class={`${data.icon} mb-4 text-2xl text-coral`} />
-            <h3 class="font-display mb-3 text-xl font-semibold">{pick(data.title, lang)}</h3>
-            <p class="mb-4 grow text-sm">{pick(data.text, lang)}</p>
+        <div class="grid gap-8 lg:grid-cols-3">
+            {
+                projects.map(({ data }) => (
+                    <article class="flex flex-col rounded-md border border-edge bg-surface p-8 shadow-card transition-transform duration-200 hover:-translate-y-1">
+                        <i class={`${data.icon} mb-4 text-2xl text-coral`} />
+                        <h3 class="mb-3 font-display text-xl font-semibold">
+                            {pick(data.title, lang)}
+                        </h3>
+                        <p class="mb-4 grow text-sm">{pick(data.text, lang)}</p>
 
-            <div class="font-mono mb-4 flex flex-wrap gap-2">
-              {data.tags.map((tag) => (
-                <span class="rounded-full bg-coral-soft px-2.5 py-1 text-xs text-coral-text">
-                  {tag}
-                </span>
-              ))}
-            </div>
+                        <div class="mb-4 flex flex-wrap gap-2 font-mono">
+                            {data.tags.map((tag) => (
+                                <span class="rounded-full bg-coral-soft px-2.5 py-1 text-xs text-coral-text">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
 
-            {data.link && (
-              <a
-                href={data.link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-sm font-semibold text-cyan hover:underline"
-              >
-                <i
-                  class:list={[
-                    'mr-1',
-                    data.link.kind === 'code'
-                      ? 'fa-brands fa-github'
-                      : 'fa-solid fa-arrow-up-right-from-square',
-                  ]}
-                />
-                {data.link.kind === 'code' ? t('projects.viewCode') : t('projects.viewSite')}
-              </a>
-            )}
-          </article>
-        ))
-      }
+                        {data.link && (
+                            <a
+                                href={data.link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-sm font-semibold text-cyan hover:underline"
+                            >
+                                <i
+                                    class:list={[
+                                        "mr-1",
+                                        data.link.kind === "code"
+                                            ? "fa-brands fa-github"
+                                            : "fa-solid fa-arrow-up-right-from-square",
+                                    ]}
+                                />
+                                {data.link.kind === "code"
+                                    ? t("projects.viewCode")
+                                    : t("projects.viewSite")}
+                            </a>
+                        )}
+                    </article>
+                ))
+            }
+        </div>
     </div>
-  </div>
 </section>

@@ -1,10 +1,10 @@
 ---
-import '../styles/global.css';
-import type { Lang } from '../i18n/ui';
-import { useTranslations } from '../i18n/utils';
+import "../styles/global.css";
+import type { Lang } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
 
 interface Props {
-  lang: Lang;
+    lang: Lang;
 }
 
 const { lang } = Astro.props;
@@ -13,77 +13,83 @@ const t = useTranslations(lang);
 
 <!doctype html>
 <html lang={lang} data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{t('title')}</title>
-    <meta name="description" content={t('meta.description')} />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{t("title")}</title>
+        <meta name="description" content={t("meta.description")} />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <link rel="alternate" hreflang="en" href={new URL('/', Astro.site ?? Astro.url)} />
-    <link rel="alternate" hreflang="de" href={new URL('/de/', Astro.site ?? Astro.url)} />
+        <link rel="alternate" hreflang="en" href={new URL("/", Astro.site ?? Astro.url)} />
+        <link rel="alternate" hreflang="de" href={new URL("/de/", Astro.site ?? Astro.url)} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
 
-    <script is:inline>
-      // Applied before first paint so the correct theme never flashes.
-      (function () {
-        try {
-          var saved = localStorage.getItem('mb-theme');
-          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
-        } catch (e) {
-          /* keep the server-rendered default */
-        }
-      })();
-    </script>
-  </head>
+        <script is:inline>
+            // Applied before first paint so the correct theme never flashes.
+            (function () {
+                try {
+                    var saved = localStorage.getItem("mb-theme");
+                    var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                    document.documentElement.setAttribute(
+                        "data-theme",
+                        saved || (prefersDark ? "dark" : "light"),
+                    );
+                } catch (e) {
+                    /* keep the server-rendered default */
+                }
+            })();
+        </script>
+    </head>
 
-  <body>
-    <a
-      href="#main"
-      class="absolute -left-[9999px] top-0 z-50 rounded-br-sm bg-ink px-4 py-3 text-paper focus:left-0"
-    >
-      {t('skip')}
-    </a>
+    <body>
+        <a
+            href="#main"
+            class="absolute top-0 -left-[9999px] z-50 rounded-br-sm bg-ink px-4 py-3 text-paper focus:left-0"
+        >
+            {t("skip")}
+        </a>
 
-    <slot />
+        <slot />
 
-    <script>
-      // Scroll-triggered reveal. Class-toggle based (not nth-child), so any
-      // number of sections/timeline entries animate correctly.
-      const revealEls = document.querySelectorAll<HTMLElement>('.reveal');
+        <script>
+            // Scroll-triggered reveal. Class-toggle based (not nth-child), so any
+            // number of sections/timeline entries animate correctly.
+            const revealEls = document.querySelectorAll<HTMLElement>(".reveal");
 
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver(
-          (entries) => {
-            for (const entry of entries) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                io.unobserve(entry.target);
-              }
+            if ("IntersectionObserver" in window) {
+                const io = new IntersectionObserver(
+                    (entries) => {
+                        for (const entry of entries) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("is-visible");
+                                io.unobserve(entry.target);
+                            }
+                        }
+                    },
+                    { threshold: 0.15 },
+                );
+                revealEls.forEach((el) => io.observe(el));
+            } else {
+                revealEls.forEach((el) => el.classList.add("is-visible"));
             }
-          },
-          { threshold: 0.15 }
-        );
-        revealEls.forEach((el) => io.observe(el));
-      } else {
-        revealEls.forEach((el) => el.classList.add('is-visible'));
-      }
-    </script>
-  </body>
+        </script>
+    </body>
 </html>

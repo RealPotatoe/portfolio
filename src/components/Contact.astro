@@ -1,10 +1,10 @@
 ---
-import type { Lang } from '../i18n/ui';
-import { useTranslations } from '../i18n/utils';
-import SectionHeading from './SectionHeading.astro';
+import type { Lang } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
+import SectionHeading from "./SectionHeading.astro";
 
 interface Props {
-  lang: Lang;
+    lang: Lang;
 }
 
 const { lang } = Astro.props;
@@ -12,41 +12,41 @@ const t = useTranslations(lang);
 ---
 
 <section id="contact" class="reveal py-24">
-  <div class="mx-auto max-w-6xl px-8">
-    <SectionHeading title={t('contact.title')} center />
+    <div class="mx-auto max-w-6xl px-8">
+        <SectionHeading title={t("contact.title")} center />
 
-    <p class="mx-auto mb-8 max-w-xl text-center">{t('contact.text')}</p>
+        <p class="mx-auto mb-8 max-w-xl text-center">{t("contact.text")}</p>
 
-    <div class="flex flex-col items-center gap-4">
-      <a
-        href="mailto:contact@mbengel.dev"
-        class="inline-flex items-center gap-2 rounded-sm bg-coral px-6 py-3.5 text-base font-semibold text-on-coral transition-all duration-200 hover:-translate-y-0.5 hover:bg-coral-hover"
-      >
-        {t('contact.button')}
-      </a>
+        <div class="flex flex-col items-center gap-4">
+            <a
+                href="mailto:contact@mbengel.dev"
+                class="inline-flex items-center gap-2 rounded-sm bg-coral px-6 py-3.5 text-base font-semibold text-on-coral transition-all duration-200 hover:-translate-y-0.5 hover:bg-coral-hover"
+            >
+                {t("contact.button")}
+            </a>
 
-      <p class="font-hand -mt-1 text-2xl text-coral-display">{t('contact.signoff')}</p>
+            <p class="-mt-1 font-hand text-2xl text-coral-display">{t("contact.signoff")}</p>
 
-      <div class="flex gap-6">
-        <a
-          href="https://www.linkedin.com/in/moritz-bengel/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="text-2xl text-slate transition-colors duration-200 hover:text-coral-display"
-        >
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a
-          href="https://github.com/RealPotatoe"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          class="text-2xl text-slate transition-colors duration-200 hover:text-coral-display"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </div>
+            <div class="flex gap-6">
+                <a
+                    href="https://www.linkedin.com/in/moritz-bengel/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    class="text-2xl text-slate transition-colors duration-200 hover:text-coral-display"
+                >
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                    href="https://github.com/RealPotatoe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    class="text-2xl text-slate transition-colors duration-200 hover:text-coral-display"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>

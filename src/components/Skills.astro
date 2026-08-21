@@ -1,45 +1,47 @@
 ---
-import type { Lang } from '../i18n/ui';
-import { useTranslations } from '../i18n/utils';
-import SectionHeading from './SectionHeading.astro';
-import { dailyDrivers, alsoComfortable, type Skill } from '../data/skills';
+import type { Lang } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
+import SectionHeading from "./SectionHeading.astro";
+import { dailyDrivers, alsoComfortable, type Skill } from "../data/skills";
 
 interface Props {
-  lang: Lang;
+    lang: Lang;
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 const groups: { title: string; skills: Skill[] }[] = [
-  { title: t('skills.favoriteTools'), skills: dailyDrivers },
-  { title: t('skills.otherSkills'), skills: alsoComfortable },
+    { title: t("skills.favoriteTools"), skills: dailyDrivers },
+    { title: t("skills.otherSkills"), skills: alsoComfortable },
 ];
 ---
 
 <section id="skills" class="reveal py-24">
-  <div class="mx-auto max-w-6xl px-8">
-    <SectionHeading title={t('skills.title')} center />
+    <div class="mx-auto max-w-6xl px-8">
+        <SectionHeading title={t("skills.title")} center />
 
-    <div class="flex flex-col gap-12">
-      {
-        groups.map((group) => (
-          <div>
-            <h3 class="font-display mb-6 text-center text-xl font-semibold">{group.title}</h3>
-            <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
-              {group.skills.map((skill) => (
-                <div class="group flex flex-col items-center gap-2 rounded-md border border-transparent p-4 transition-all duration-200 hover:-translate-y-1 hover:border-edge">
-                  <i
-                    class={`${skill.icon} text-4xl transition-transform duration-200 group-hover:scale-110`}
-                    style={skill.style}
-                  />
-                  <span class="text-sm font-medium text-slate">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))
-      }
+        <div class="flex flex-col gap-12">
+            {
+                groups.map((group) => (
+                    <div>
+                        <h3 class="mb-6 text-center font-display text-xl font-semibold">
+                            {group.title}
+                        </h3>
+                        <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+                            {group.skills.map((skill) => (
+                                <div class="group flex flex-col items-center gap-2 rounded-md border border-transparent p-4 transition-all duration-200 hover:-translate-y-1 hover:border-edge">
+                                    <i
+                                        class={`${skill.icon} text-4xl transition-transform duration-200 group-hover:scale-110`}
+                                        style={skill.style}
+                                    />
+                                    <span class="text-sm font-medium text-slate">{skill.name}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
     </div>
-  </div>
 </section>

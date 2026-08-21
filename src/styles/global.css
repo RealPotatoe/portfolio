@@ -4,163 +4,163 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  /* color — light */
-  --color-ink: #241c18;
-  --color-paper: #fff5ee;
-  --color-surface: #ffffff;
-  --color-slate: #8a7b72;
-  --color-edge: #ede0d6;
-  --color-cyan: #0e93a0;
-  --color-coral: #ff7f50;
-  --color-coral-hover: #e56a3c;
-  --color-coral-soft: rgb(255 127 80 / 0.1);
-  /* Foreground for text/icons sitting on a solid coral fill. Coral is too
+    /* color — light */
+    --color-ink: #241c18;
+    --color-paper: #fff5ee;
+    --color-surface: #ffffff;
+    --color-slate: #8a7b72;
+    --color-edge: #ede0d6;
+    --color-cyan: #0e93a0;
+    --color-coral: #ff7f50;
+    --color-coral-hover: #e56a3c;
+    --color-coral-soft: rgb(255 127 80 / 0.1);
+    /* Foreground for text/icons sitting on a solid coral fill. Coral is too
      light to carry white text (2.5:1), so solid coral surfaces use ink (6.7:1). */
-  --color-on-coral: #241c18;
-  /* Coral as *text* on paper/surface. --color-coral itself is only 2.33:1, so
+    --color-on-coral: #241c18;
+    /* Coral as *text* on paper/surface. --color-coral itself is only 2.33:1, so
      it is reserved for fills and decorative icons. Same hue (16.1deg), darkened
      to clear the contrast bars:
        coral-text    -> body-size text and links   (4.61:1 paper, 4.95:1 surface)
        coral-display -> text >=24px, headings, logo (3.44:1 paper, 3.70:1 surface) */
-  --color-coral-text: #c84210;
-  --color-coral-display: #dd5d2f;
-  --color-green: #1e9e5a;
+    --color-coral-text: #c84210;
+    --color-coral-display: #dd5d2f;
+    --color-green: #1e9e5a;
 
-  /* type */
-  --font-display: "Fraunces", serif;
-  --font-body: "Inter", sans-serif;
-  --font-sans: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-  --font-hand: "Caveat", cursive;
+    /* type */
+    --font-display: "Fraunces", serif;
+    --font-body: "Inter", sans-serif;
+    --font-sans: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+    --font-hand: "Caveat", cursive;
 
-  /* radius */
-  --radius-sm: 8px;
-  --radius-md: 14px;
+    /* radius */
+    --radius-sm: 8px;
+    --radius-md: 14px;
 
-  /* elevation + motion */
-  --shadow-card: 0 6px 18px rgb(36 28 24 / 0.08);
-  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    /* elevation + motion */
+    --shadow-card: 0 6px 18px rgb(36 28 24 / 0.08);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Higher specificity than :root so the dark overrides always win */
 html[data-theme="dark"] {
-  --color-ink: #f2e9e4;
-  --color-paper: #1c1917;
-  --color-surface: #292420;
-  --color-slate: #a8988e;
-  --color-edge: #3c332c;
-  --color-cyan: #4dd4dc;
-  --color-coral: #ff8f6b;
-  --color-coral-hover: #ffa584;
-  --color-coral-soft: rgb(255 143 107 / 0.12);
-  --color-on-coral: #1c1917;
-  /* Dark mode: coral already clears 4.5:1 on both dark backgrounds
+    --color-ink: #f2e9e4;
+    --color-paper: #1c1917;
+    --color-surface: #292420;
+    --color-slate: #a8988e;
+    --color-edge: #3c332c;
+    --color-cyan: #4dd4dc;
+    --color-coral: #ff8f6b;
+    --color-coral-hover: #ffa584;
+    --color-coral-soft: rgb(255 143 107 / 0.12);
+    --color-on-coral: #1c1917;
+    /* Dark mode: coral already clears 4.5:1 on both dark backgrounds
      (7.82:1 paper, 6.87:1 surface), so both text tiers just use it as-is. */
-  --color-coral-text: #ff8f6b;
-  --color-coral-display: #ff8f6b;
-  --color-green: #3ed98a;
-  --shadow-card: 0 6px 20px rgb(0 0 0 / 0.4);
+    --color-coral-text: #ff8f6b;
+    --color-coral-display: #ff8f6b;
+    --color-green: #3ed98a;
+    --shadow-card: 0 6px 20px rgb(0 0 0 / 0.4);
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+    html {
+        scroll-behavior: smooth;
+    }
 
-  body {
-    background-color: var(--color-paper);
-    color: var(--color-ink);
-    font-family: var(--font-body);
-    line-height: 1.65;
-    transition:
-      background-color 0.3s var(--ease-smooth),
-      color 0.3s var(--ease-smooth);
-  }
+    body {
+        background-color: var(--color-paper);
+        color: var(--color-ink);
+        font-family: var(--font-body);
+        line-height: 1.65;
+        transition:
+            background-color 0.3s var(--ease-smooth),
+            color 0.3s var(--ease-smooth);
+    }
 
-  :focus-visible {
-    outline: 2px solid var(--color-cyan);
-    outline-offset: 2px;
-    border-radius: var(--radius-sm);
-  }
+    :focus-visible {
+        outline: 2px solid var(--color-cyan);
+        outline-offset: 2px;
+        border-radius: var(--radius-sm);
+    }
 }
 
 @layer components {
-  /* Hand-drawn squiggle under section headings. The SVG is used as a mask
+    /* Hand-drawn squiggle under section headings. The SVG is used as a mask
      (shape only — stroke color is irrelevant), so the visible color comes from
      --color-coral and follows the theme automatically. */
-  .squiggle {
-    --squiggle-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 14'%3E%3Cpath d='M2 8 Q 11 2, 20 8 T 38 8 T 56 8 T 70 6' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
-    display: block;
-    width: 72px;
-    height: 14px;
-    background-color: var(--color-coral);
-    -webkit-mask-image: var(--squiggle-mask);
-    mask-image: var(--squiggle-mask);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-  }
+    .squiggle {
+        --squiggle-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 14'%3E%3Cpath d='M2 8 Q 11 2, 20 8 T 38 8 T 56 8 T 70 6' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+        display: block;
+        width: 72px;
+        height: 14px;
+        background-color: var(--color-coral);
+        -webkit-mask-image: var(--squiggle-mask);
+        mask-image: var(--squiggle-mask);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+    }
 
-  /* Rising "steam" doodle behind the hero. Uses a mask so the line color
+    /* Rising "steam" doodle behind the hero. Uses a mask so the line color
      follows --color-coral automatically in dark mode. */
-  .steam {
-    --steam-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M15 0 Q25 12.5 15 25 T15 50 T15 75 T15 100' stroke='black' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 0 Q40 12.5 50 25 T50 50 T50 75 T50 100' stroke='black' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M85 0 Q95 12.5 85 25 T85 50 T85 75 T85 100' stroke='black' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-color: var(--color-coral);
-    opacity: 0.14;
-    -webkit-mask-image: var(--steam-mask);
-    mask-image: var(--steam-mask);
-    -webkit-mask-repeat: repeat;
-    mask-repeat: repeat;
-    -webkit-mask-size: 110px 110px;
-    mask-size: 110px 110px;
-    animation: steam-drift 11s linear infinite;
-  }
-
-  @keyframes steam-drift {
-    from {
-      -webkit-mask-position: 0 0;
-      mask-position: 0 0;
+    .steam {
+        --steam-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M15 0 Q25 12.5 15 25 T15 50 T15 75 T15 100' stroke='black' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M50 0 Q40 12.5 50 25 T50 50 T50 75 T50 100' stroke='black' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M85 0 Q95 12.5 85 25 T85 50 T85 75 T85 100' stroke='black' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-color: var(--color-coral);
+        opacity: 0.14;
+        -webkit-mask-image: var(--steam-mask);
+        mask-image: var(--steam-mask);
+        -webkit-mask-repeat: repeat;
+        mask-repeat: repeat;
+        -webkit-mask-size: 110px 110px;
+        mask-size: 110px 110px;
+        animation: steam-drift 11s linear infinite;
     }
-    to {
-      -webkit-mask-position: 0 -110px;
-      mask-position: 0 -110px;
+
+    @keyframes steam-drift {
+        from {
+            -webkit-mask-position: 0 0;
+            mask-position: 0 0;
+        }
+        to {
+            -webkit-mask-position: 0 -110px;
+            mask-position: 0 -110px;
+        }
     }
-  }
 
-  /* Wobbly hand-drawn circle for the portrait frame */
-  .wobble {
-    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
-  }
+    /* Wobbly hand-drawn circle for the portrait frame */
+    .wobble {
+        border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    }
 
-  /* Scroll-triggered reveal (IntersectionObserver in Layout.astro).
+    /* Scroll-triggered reveal (IntersectionObserver in Layout.astro).
      Not nth-child based, so it works with any number of items. */
-  .reveal {
-    opacity: 0;
-    transform: translateY(16px);
-    transition:
-      opacity 0.6s var(--ease-smooth),
-      transform 0.6s var(--ease-smooth);
-  }
+    .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+            opacity 0.6s var(--ease-smooth),
+            transform 0.6s var(--ease-smooth);
+    }
 
-  .reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 
-  .steam {
-    animation: none;
-  }
+    .steam {
+        animation: none;
+    }
 
-  html {
-    scroll-behavior: auto;
-  }
+    html {
+        scroll-behavior: auto;
+    }
 }

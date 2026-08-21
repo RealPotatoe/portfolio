@@ -1,71 +1,87 @@
 ---
-import type { Lang } from '../i18n/ui';
-import { useTranslations } from '../i18n/utils';
-import SectionHeading from './SectionHeading.astro';
+import type { Lang } from "../i18n/ui";
+import { useTranslations } from "../i18n/utils";
+import SectionHeading from "./SectionHeading.astro";
 
 interface Props {
-  lang: Lang;
+    lang: Lang;
 }
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 const facts = [
-  { icon: 'fa-solid fa-location-dot', label: t('about.fact.location'), value: t('about.fact.locationValue') },
-  { icon: 'fa-solid fa-briefcase', label: t('about.fact.role'), value: t('about.fact.roleValue') },
-  { icon: 'fa-solid fa-compass', label: t('about.fact.focus'), value: t('about.fact.focusValue') },
-  { icon: 'fa-solid fa-graduation-cap', label: t('about.fact.grad'), value: t('about.fact.gradValue') },
+    {
+        icon: "fa-solid fa-location-dot",
+        label: t("about.fact.location"),
+        value: t("about.fact.locationValue"),
+    },
+    {
+        icon: "fa-solid fa-briefcase",
+        label: t("about.fact.role"),
+        value: t("about.fact.roleValue"),
+    },
+    {
+        icon: "fa-solid fa-compass",
+        label: t("about.fact.focus"),
+        value: t("about.fact.focusValue"),
+    },
+    {
+        icon: "fa-solid fa-graduation-cap",
+        label: t("about.fact.grad"),
+        value: t("about.fact.gradValue"),
+    },
 ];
 
 const hobbies = [
-  { icon: 'fa-solid fa-mug-hot', title: t('about.hobby1.title'), text: t('about.hobby1.text') },
-  { icon: 'fa-solid fa-mountain', title: t('about.hobby2.title'), text: t('about.hobby2.text') },
-  { icon: 'fa-solid fa-dragon', title: t('about.hobby3.title'), text: t('about.hobby3.text') },
+    { icon: "fa-solid fa-mug-hot", title: t("about.hobby1.title"), text: t("about.hobby1.text") },
+    { icon: "fa-solid fa-mountain", title: t("about.hobby2.title"), text: t("about.hobby2.text") },
+    { icon: "fa-solid fa-dragon", title: t("about.hobby3.title"), text: t("about.hobby3.text") },
 ];
 ---
 
 <section id="about" class="reveal py-24">
-  <div class="mx-auto max-w-6xl px-8">
-    <SectionHeading title={t('about.title')} />
+    <div class="mx-auto max-w-6xl px-8">
+        <SectionHeading title={t("about.title")} />
 
-    <div class="mb-12 grid items-start gap-16 md:grid-cols-[1.5fr_1fr]">
-      <div>
-        <p class="mb-4 max-w-prose text-base">{t('about.text')}</p>
-        <p class="max-w-prose text-base italic text-slate">{t('about.bridge')}</p>
-      </div>
-
-      <aside class="rotate-1 rounded-md border border-edge bg-surface p-6 shadow-card">
-        {
-          facts.map((fact, i) => (
-            <div
-              class:list={[
-                'flex items-start gap-3 py-3',
-                i < facts.length - 1 && 'border-b border-edge',
-              ]}
-            >
-              <i class={`${fact.icon} mt-1 w-5 text-center text-base text-coral`} />
-              <div class="flex flex-col gap-0.5">
-                <span class="text-xs tracking-wide text-slate uppercase">
-                  {fact.label}
-                </span>
-                <span class="text-base font-medium">{fact.value}</span>
-              </div>
+        <div class="mb-12 grid items-start gap-16 md:grid-cols-[1.5fr_1fr]">
+            <div>
+                <p class="mb-4 max-w-prose text-base">{t("about.text")}</p>
+                <p class="max-w-prose text-base text-slate italic">{t("about.bridge")}</p>
             </div>
-          ))
-        }
-      </aside>
-    </div>
 
-    <div class="grid gap-6 md:grid-cols-3">
-      {
-        hobbies.map((hobby) => (
-          <div class="rounded-md border border-edge bg-surface p-6 text-center shadow-card">
-            <i class={`${hobby.icon} mb-3 text-2xl text-coral`} />
-            <h3 class="font-display mb-2 text-lg font-semibold">{hobby.title}</h3>
-            <p class="text-sm text-slate" set:html={hobby.text} />
-          </div>
-        ))
-      }
+            <aside class="rotate-1 rounded-md border border-edge bg-surface p-6 shadow-card">
+                {
+                    facts.map((fact, i) => (
+                        <div
+                            class:list={[
+                                "flex items-start gap-3 py-3",
+                                i < facts.length - 1 && "border-b border-edge",
+                            ]}
+                        >
+                            <i class={`${fact.icon} mt-1 w-5 text-center text-base text-coral`} />
+                            <div class="flex flex-col gap-0.5">
+                                <span class="text-xs tracking-wide text-slate uppercase">
+                                    {fact.label}
+                                </span>
+                                <span class="text-base font-medium">{fact.value}</span>
+                            </div>
+                        </div>
+                    ))
+                }
+            </aside>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+            {
+                hobbies.map((hobby) => (
+                    <div class="rounded-md border border-edge bg-surface p-6 text-center shadow-card">
+                        <i class={`${hobby.icon} mb-3 text-2xl text-coral`} />
+                        <h3 class="mb-2 font-display text-lg font-semibold">{hobby.title}</h3>
+                        <p class="text-sm text-slate" set:html={hobby.text} />
+                    </div>
+                ))
+            }
+        </div>
     </div>
-  </div>
 </section>

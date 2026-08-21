@@ -1,52 +1,52 @@
 [
-  {
-    "id": "deckbuilder",
-    "order": 1,
-    "icon": "fa-solid fa-robot",
-    "tags": ["Python", "LLM Agents", "Scryfall API", "SSE"],
-    "title": {
-      "en": "EDH Deckbuilder Agent",
-      "de": "EDH Deckbuilder Agent"
+    {
+        "id": "deckbuilder",
+        "order": 1,
+        "icon": "fa-solid fa-robot",
+        "tags": ["Python", "LLM Agents", "Scryfall API", "SSE"],
+        "title": {
+            "en": "EDH Deckbuilder Agent",
+            "de": "EDH Deckbuilder Agent"
+        },
+        "text": {
+            "en": "A Python AI agent that automates Magic: The Gathering Commander deckbuilding. It talks to a self-hosted LLM over an OpenAI-compatible endpoint, pulls live card data and pricing from the Scryfall API, and streams its reasoning back over SSE while respecting budget constraints and commander legality.",
+            "de": "Ein Python-KI-Agent, der das Deckbuilding für Magic: The Gathering Commander automatisiert. Er kommuniziert mit einem selbst gehosteten LLM über eine OpenAI-kompatible Schnittstelle, ruft Kartendaten und Preise live über die Scryfall-API ab und streamt seine Überlegungen per SSE, unter Berücksichtigung von Budget und Commander-Legalität."
+        },
+        "link": {
+            "href": "https://github.com/RealPotatoe",
+            "kind": "code"
+        }
     },
-    "text": {
-      "en": "A Python AI agent that automates Magic: The Gathering Commander deckbuilding. It talks to a self-hosted LLM over an OpenAI-compatible endpoint, pulls live card data and pricing from the Scryfall API, and streams its reasoning back over SSE while respecting budget constraints and commander legality.",
-      "de": "Ein Python-KI-Agent, der das Deckbuilding für Magic: The Gathering Commander automatisiert. Er kommuniziert mit einem selbst gehosteten LLM über eine OpenAI-kompatible Schnittstelle, ruft Kartendaten und Preise live über die Scryfall-API ab und streamt seine Überlegungen per SSE, unter Berücksichtigung von Budget und Commander-Legalität."
+    {
+        "id": "yipyip",
+        "order": 2,
+        "icon": "fa-solid fa-users",
+        "tags": ["Astro", "Decap CMS"],
+        "title": {
+            "en": "YipYip Crew",
+            "de": "YipYip Crew"
+        },
+        "text": {
+            "en": "Team website for YipYip Crew, a small Magic: The Gathering team. Built with Astro and content-managed through Decap CMS, so teammates can update their own player profiles without touching code.",
+            "de": "Teamwebsite für YipYip Crew, ein kleines Magic: The Gathering Team. Gebaut mit Astro und über Decap CMS gepflegt, sodass Teammitglieder ihre Profile selbst aktualisieren können."
+        },
+        "link": {
+            "href": "https://yipyipcrew.de",
+            "kind": "site"
+        }
     },
-    "link": {
-      "href": "https://github.com/RealPotatoe",
-      "kind": "code"
+    {
+        "id": "homelab",
+        "order": 3,
+        "icon": "fa-solid fa-server",
+        "tags": ["NixOS", "Kubernetes", "GitOps"],
+        "title": {
+            "en": "NixOS Homelab",
+            "de": "NixOS Homelab"
+        },
+        "text": {
+            "en": "A self-hosted homelab running on NixOS with a full deploy-rs pipeline, currently growing from a single node into a 3-node k3s HA cluster. Traefik handles ingress, kube-vip covers control-plane networking, and FluxCD runs GitOps on top.",
+            "de": "Ein selbst gehostetes Homelab auf NixOS mit vollständiger deploy-rs-Pipeline, das von einem einzelnen Knoten zu einem 3-Node-k3s-HA-Cluster wächst. Traefik übernimmt Ingress, kube-vip das Control-Plane-Networking und FluxCD GitOps."
+        }
     }
-  },
-  {
-    "id": "yipyip",
-    "order": 2,
-    "icon": "fa-solid fa-users",
-    "tags": ["Astro", "Decap CMS"],
-    "title": {
-      "en": "YipYip Crew",
-      "de": "YipYip Crew"
-    },
-    "text": {
-      "en": "Team website for YipYip Crew, a small Magic: The Gathering team. Built with Astro and content-managed through Decap CMS, so teammates can update their own player profiles without touching code.",
-      "de": "Teamwebsite für YipYip Crew, ein kleines Magic: The Gathering Team. Gebaut mit Astro und über Decap CMS gepflegt, sodass Teammitglieder ihre Profile selbst aktualisieren können."
-    },
-    "link": {
-      "href": "https://yipyipcrew.de",
-      "kind": "site"
-    }
-  },
-  {
-    "id": "homelab",
-    "order": 3,
-    "icon": "fa-solid fa-server",
-    "tags": ["NixOS", "Kubernetes", "GitOps"],
-    "title": {
-      "en": "NixOS Homelab",
-      "de": "NixOS Homelab"
-    },
-    "text": {
-      "en": "A self-hosted homelab running on NixOS with a full deploy-rs pipeline, currently growing from a single node into a 3-node k3s HA cluster. Traefik handles ingress, kube-vip covers control-plane networking, and FluxCD runs GitOps on top.",
-      "de": "Ein selbst gehostetes Homelab auf NixOS mit vollständiger deploy-rs-Pipeline, das von einem einzelnen Knoten zu einem 3-Node-k3s-HA-Cluster wächst. Traefik übernimmt Ingress, kube-vip das Control-Plane-Networking und FluxCD GitOps."
-    }
-  }
 ]
