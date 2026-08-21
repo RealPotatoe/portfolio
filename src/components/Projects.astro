@@ -15,20 +15,20 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
 ---
 
 <section id="projects" class="reveal py-24">
-  <div class="mx-auto max-w-[1120px] px-8">
+  <div class="mx-auto max-w-6xl px-8">
     <SectionHeading title={t('projects.title')} center />
 
     <div class="grid gap-8 lg:grid-cols-3">
       {
         projects.map(({ data }) => (
-          <article class="flex flex-col rounded-md border border-edge bg-surface p-8 shadow-card transition-transform duration-[250ms] hover:-translate-y-1">
-            <i class={`${data.icon} mb-4 text-[1.5rem] text-coral`} />
-            <h3 class="font-display mb-3 text-[1.2rem] font-semibold">{pick(data.title, lang)}</h3>
-            <p class="mb-4 grow text-[0.92rem]">{pick(data.text, lang)}</p>
+          <article class="flex flex-col rounded-md border border-edge bg-surface p-8 shadow-card transition-transform duration-200 hover:-translate-y-1">
+            <i class={`${data.icon} mb-4 text-2xl text-coral`} />
+            <h3 class="font-display mb-3 text-xl font-semibold">{pick(data.title, lang)}</h3>
+            <p class="mb-4 grow text-sm">{pick(data.text, lang)}</p>
 
             <div class="font-mono mb-4 flex flex-wrap gap-2">
               {data.tags.map((tag) => (
-                <span class="rounded-full bg-coral-soft px-2.5 py-[3px] text-[0.7rem] text-coral-hover dark:text-coral">
+                <span class="rounded-full bg-coral-soft px-2.5 py-1 text-xs text-coral-hover dark:text-coral">
                   {tag}
                 </span>
               ))}
@@ -39,7 +39,7 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
                 href={data.link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-[0.9rem] font-semibold text-cyan hover:underline"
+                class="text-sm font-semibold text-cyan hover:underline"
               >
                 <i
                   class:list={[

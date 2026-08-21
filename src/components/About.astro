@@ -25,13 +25,13 @@ const hobbies = [
 ---
 
 <section id="about" class="reveal py-24">
-  <div class="mx-auto max-w-[1120px] px-8">
+  <div class="mx-auto max-w-6xl px-8">
     <SectionHeading title={t('about.title')} />
 
     <div class="mb-12 grid items-start gap-16 md:grid-cols-[1.5fr_1fr]">
       <div>
-        <p class="mb-4 max-w-[60ch] text-[1.05rem]">{t('about.text')}</p>
-        <p class="max-w-[60ch] text-[1.05rem] italic text-slate">{t('about.bridge')}</p>
+        <p class="mb-4 max-w-prose text-base">{t('about.text')}</p>
+        <p class="max-w-prose text-base italic text-slate">{t('about.bridge')}</p>
       </div>
 
       <aside class="rotate-1 rounded-md border border-edge bg-surface p-6 shadow-card">
@@ -43,12 +43,12 @@ const hobbies = [
                 i < facts.length - 1 && 'border-b border-edge',
               ]}
             >
-              <i class={`${fact.icon} mt-[3px] w-[18px] text-center text-base text-coral`} />
+              <i class={`${fact.icon} mt-1 w-5 text-center text-base text-coral`} />
               <div class="flex flex-col gap-0.5">
-                <span class="text-[0.75rem] tracking-[0.03em] text-slate uppercase">
+                <span class="text-xs tracking-wide text-slate uppercase">
                   {fact.label}
                 </span>
-                <span class="text-[0.95rem] font-medium">{fact.value}</span>
+                <span class="text-base font-medium">{fact.value}</span>
               </div>
             </div>
           ))
@@ -60,9 +60,9 @@ const hobbies = [
       {
         hobbies.map((hobby) => (
           <div class="rounded-md border border-edge bg-surface p-6 text-center shadow-card">
-            <i class={`${hobby.icon} mb-3 text-[1.6rem] text-coral`} />
-            <h3 class="font-display mb-2 text-[1.1rem] font-semibold">{hobby.title}</h3>
-            <p class="text-[0.9rem] text-slate" set:html={hobby.text} />
+            <i class={`${hobby.icon} mb-3 text-2xl text-coral`} />
+            <h3 class="font-display mb-2 text-lg font-semibold">{hobby.title}</h3>
+            <p class="text-sm text-slate" set:html={hobby.text} />
           </div>
         ))
       }

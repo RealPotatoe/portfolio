@@ -30,7 +30,7 @@
   aria-pressed={theme === 'dark'}
   aria-label={label}
   title={label}
-  class="inline-flex h-[34px] w-[34px] cursor-pointer items-center justify-center rounded-full border border-edge text-[0.9rem] text-ink transition-colors duration-200 hover:border-coral hover:text-coral"
+  class="inline-flex size-9 cursor-pointer items-center justify-center rounded-full border border-edge text-sm text-ink transition-colors duration-200 hover:border-coral hover:text-coral"
 >
   {#if theme === 'dark'}
     <i class="fa-solid fa-sun"></i>
