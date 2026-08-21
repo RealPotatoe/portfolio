@@ -1,0 +1,34 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations, localizePath } from '../i18n/utils';
+import LangSwitcher from './LangSwitcher.astro';
+import ThemeToggle from './ThemeToggle.svelte';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<header
+  id="top"
+  class="sticky top-0 z-50 border-b border-edge backdrop-blur-md"
+  style="background: color-mix(in srgb, var(--color-paper) 90%, transparent);"
+>
+  <div class="mx-auto flex max-w-[1120px] items-center justify-between gap-6 px-8 py-3">
+    <a
+      href={localizePath('/', lang)}
+      aria-label={t('nav.home')}
+      class="font-display text-[1.4rem] font-semibold text-coral"
+    >
+      MB
+    </a>
+
+    <div class="flex items-center gap-4">
+      <LangSwitcher lang={lang} />
+      <ThemeToggle client:load label={t('theme.label')} />
+    </div>
+  </div>
+</header>

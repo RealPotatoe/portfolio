@@ -1,0 +1,45 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+import SectionHeading from './SectionHeading.astro';
+import { dailyDrivers, alsoComfortable, type Skill } from '../data/skills';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const groups: { title: string; skills: Skill[] }[] = [
+  { title: t('skills.favoriteTools'), skills: dailyDrivers },
+  { title: t('skills.otherSkills'), skills: alsoComfortable },
+];
+---
+
+<section id="skills" class="reveal py-24">
+  <div class="mx-auto max-w-[1120px] px-8">
+    <SectionHeading title={t('skills.title')} center />
+
+    <div class="flex flex-col gap-12">
+      {
+        groups.map((group) => (
+          <div>
+            <h3 class="font-display mb-6 text-center text-[1.2rem] font-semibold">{group.title}</h3>
+            <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+              {group.skills.map((skill) => (
+                <div class="group flex flex-col items-center gap-2 rounded-md border border-transparent p-4 transition-all duration-200 hover:-translate-y-[3px] hover:border-edge">
+                  <i
+                    class={`${skill.icon} text-[2.25rem] transition-transform duration-[250ms] group-hover:scale-[1.08]`}
+                    style={skill.style}
+                  />
+                  <span class="text-[0.8rem] font-medium text-slate">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

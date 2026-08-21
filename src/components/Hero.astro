@@ -1,0 +1,95 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section
+  class="relative overflow-hidden bg-surface pt-24 pb-[calc(4rem+60px)] transition-colors duration-300"
+  style="background-image: radial-gradient(circle at 78% 30%, var(--color-coral-soft), transparent 60%);"
+>
+  <div class="steam pointer-events-none absolute inset-0 z-0" aria-hidden="true"></div>
+
+  <div
+    class="relative z-10 mx-auto flex max-w-[1120px] flex-col-reverse items-center justify-between gap-16 px-8 text-center md:flex-row-reverse md:text-left"
+  >
+    <div class="max-w-[560px]">
+      <p class="font-hand -mb-1 text-[1.75rem] leading-none text-coral">{t('hero.hi')}</p>
+      <h1 class="font-display mb-3 text-[2.6rem] leading-[1.08] font-semibold md:text-[3.4rem]">
+        {t('hero.name')}
+      </h1>
+      <p class="mb-6 text-[1.2rem] font-medium text-slate">{t('hero.role')}</p>
+      <p class="mb-8 max-w-[480px] text-[1.1rem]" set:html={t('hero.tagline')} />
+
+      <div class="mb-8 flex flex-wrap justify-center gap-4 md:justify-start">
+        <a
+          href="#projects"
+          class="inline-flex items-center gap-2 rounded-sm bg-coral px-6 py-3.5 text-[0.95rem] font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-coral-hover"
+        >
+          {t('hero.cta')}
+        </a>
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 rounded-sm border border-edge px-6 py-3.5 text-[0.95rem] font-semibold text-ink transition-all duration-200 hover:border-coral hover:text-coral"
+        >
+          <i class="fa-solid fa-arrow-down"></i>
+          {t('hero.resume')}
+        </a>
+      </div>
+
+      <div class="flex justify-center gap-6 md:justify-start">
+        <a
+          href="https://www.linkedin.com/in/moritz-bengel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="text-[1.4rem] text-slate transition-colors duration-200 hover:text-coral"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/RealPotatoe"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="text-[1.4rem] text-slate transition-colors duration-200 hover:text-coral"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex shrink-0 flex-col items-center gap-3">
+      <div class="wobble size-[190px] -rotate-2 border-[3px] border-coral p-1.5 md:size-[260px]">
+        <!-- swap for: <img src="/portrait.png" alt="Line-art portrait of Moritz Bengel"> -->
+        <div
+          class="wobble font-display flex size-full rotate-2 items-center justify-center bg-surface text-[3rem] font-semibold text-coral"
+          aria-hidden="true"
+        >
+          MB
+        </div>
+      </div>
+      <p class="text-[0.85rem] text-slate">
+        <i class="fa-solid fa-location-dot mr-1 text-coral"></i>{t('hero.location')}
+      </p>
+    </div>
+  </div>
+
+  <svg
+    class="absolute inset-x-0 -bottom-px z-10 block h-[60px] w-full"
+    viewBox="0 0 1440 100"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+  >
+    <path
+      class="transition-[fill] duration-300"
+      style="fill: var(--color-paper);"
+      d="M0,40 C240,90 480,0 720,40 C960,80 1200,10 1440,40 L1440,100 L0,100 Z"></path>
+  </svg>
+</section>
