@@ -35,9 +35,9 @@
       "automerge": true
     },
     {
-      "description": "astro check is incompatible with TypeScript 7 until it ships a programmatic API (TS7.1+). See https://github.com/withastro/roadmap/discussions/1321",
+      "description": "Mirror the peerDependencies range declared by @astrojs/check ('^5.0.0 || ^6.0.0'). TypeScript 7 dropped the programmatic compiler API that astro check needs, and neither Bun nor Renovate enforces peer ranges, so without this Renovate would keep proposing TS 7 and breaking `bun run check`. Widen this when @astrojs/check widens its peer range (expected once TS 7.1 restores the API).",
       "matchPackageNames": ["typescript"],
-      "allowedVersions": "<7"
+      "allowedVersions": "^5.0.0 || ^6.0.0"
     }
   ]
 }
