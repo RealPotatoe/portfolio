@@ -27,7 +27,7 @@ const hrefs: Record<Lang, string> = { en: '/', de: '/de/' };
           aria-current={isActive ? 'true' : undefined}
           class:list={[
             'px-3 py-1.5 transition-colors duration-200',
-            isActive ? 'bg-coral text-white' : 'text-slate hover:text-coral',
+            isActive ? 'bg-coral text-on-coral' : 'text-slate hover:text-coral-text',
           ]}
         >
           {label}

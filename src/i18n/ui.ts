@@ -43,7 +43,7 @@ export const ui = {
     'about.hobby2.title': 'Hiking',
     'about.hobby2.text': 'Happiest on a trail, rain or shine.',
     'about.hobby3.title': 'Trading Card Games',
-    'about.hobby3.text': 'Deep into Commander deckbuilding. <a class="font-semibold text-coral" href="#projects">See below ↓</a>',
+    'about.hobby3.text': 'Deep into Commander deckbuilding. <a class="font-semibold text-coral-text" href="#projects">See below ↓</a>',
 
     'skills.title': 'Skills',
     'skills.favoriteTools': 'Daily Drivers',
@@ -100,7 +100,7 @@ export const ui = {
     'about.hobby2.title': 'Wandern',
     'about.hobby2.text': 'Am liebsten auf dem Trail, bei jedem Wetter.',
     'about.hobby3.title': 'Sammelkartenspiele',
-    'about.hobby3.text': 'Tief im Commander-Deckbuilding. <a class="font-semibold text-coral" href="#projects">Siehe unten ↓</a>',
+    'about.hobby3.text': 'Tief im Commander-Deckbuilding. <a class="font-semibold text-coral-text" href="#projects">Siehe unten ↓</a>',
 
     'skills.title': 'Skills',
     'skills.favoriteTools': 'Bevorzugte Tools',

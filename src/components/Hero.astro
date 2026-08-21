@@ -20,7 +20,7 @@ const t = useTranslations(lang);
     class="relative z-10 mx-auto flex max-w-6xl flex-col-reverse items-center justify-between gap-16 px-8 text-center md:flex-row-reverse md:text-left"
   >
     <div class="max-w-xl">
-      <p class="font-hand -mb-1 text-3xl leading-none text-coral">{t('hero.hi')}</p>
+      <p class="font-hand -mb-1 text-3xl leading-none text-coral-display">{t('hero.hi')}</p>
       <h1 class="font-display mb-3 text-4xl leading-none font-semibold md:text-6xl">
         {t('hero.name')}
       </h1>
@@ -30,13 +30,13 @@ const t = useTranslations(lang);
       <div class="mb-8 flex flex-wrap justify-center gap-4 md:justify-start">
         <a
           href="#projects"
-          class="inline-flex items-center gap-2 rounded-sm bg-coral px-6 py-3.5 text-base font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-coral-hover"
+          class="inline-flex items-center gap-2 rounded-sm bg-coral px-6 py-3.5 text-base font-semibold text-on-coral transition-all duration-200 hover:-translate-y-0.5 hover:bg-coral-hover"
         >
           {t('hero.cta')}
         </a>
         <a
           href="#"
-          class="inline-flex items-center gap-2 rounded-sm border border-edge px-6 py-3.5 text-base font-semibold text-ink transition-all duration-200 hover:border-coral hover:text-coral"
+          class="inline-flex items-center gap-2 rounded-sm border border-edge px-6 py-3.5 text-base font-semibold text-ink transition-all duration-200 hover:border-coral hover:text-coral-text"
         >
           <i class="fa-solid fa-arrow-down"></i>
           {t('hero.resume')}
@@ -49,7 +49,7 @@ const t = useTranslations(lang);
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          class="text-2xl text-slate transition-colors duration-200 hover:text-coral"
+          class="text-2xl text-slate transition-colors duration-200 hover:text-coral-display"
         >
           <i class="fa-brands fa-linkedin"></i>
         </a>
@@ -58,7 +58,7 @@ const t = useTranslations(lang);
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          class="text-2xl text-slate transition-colors duration-200 hover:text-coral"
+          class="text-2xl text-slate transition-colors duration-200 hover:text-coral-display"
         >
           <i class="fa-brands fa-github"></i>
         </a>
@@ -69,7 +69,7 @@ const t = useTranslations(lang);
       <div class="wobble size-48 -rotate-2 border-4 border-coral p-1.5 md:size-64">
         <!-- swap for: <img src="/portrait.png" alt="Line-art portrait of Moritz Bengel"> -->
         <div
-          class="wobble font-display flex size-full rotate-2 items-center justify-center bg-surface text-5xl font-semibold text-coral"
+          class="wobble font-display flex size-full rotate-2 items-center justify-center bg-surface text-5xl font-semibold text-coral-display"
           aria-hidden="true"
         >
           MB

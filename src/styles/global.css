@@ -14,6 +14,16 @@
   --color-coral: #ff7f50;
   --color-coral-hover: #e56a3c;
   --color-coral-soft: rgb(255 127 80 / 0.1);
+  /* Foreground for text/icons sitting on a solid coral fill. Coral is too
+     light to carry white text (2.5:1), so solid coral surfaces use ink (6.7:1). */
+  --color-on-coral: #241c18;
+  /* Coral as *text* on paper/surface. --color-coral itself is only 2.33:1, so
+     it is reserved for fills and decorative icons. Same hue (16.1deg), darkened
+     to clear the contrast bars:
+       coral-text    -> body-size text and links   (4.61:1 paper, 4.95:1 surface)
+       coral-display -> text >=24px, headings, logo (3.44:1 paper, 3.70:1 surface) */
+  --color-coral-text: #c84210;
+  --color-coral-display: #dd5d2f;
   --color-green: #1e9e5a;
 
   /* type */
@@ -43,6 +53,11 @@ html[data-theme="dark"] {
   --color-coral: #ff8f6b;
   --color-coral-hover: #ffa584;
   --color-coral-soft: rgb(255 143 107 / 0.12);
+  --color-on-coral: #1c1917;
+  /* Dark mode: coral already clears 4.5:1 on both dark backgrounds
+     (7.82:1 paper, 6.87:1 surface), so both text tiers just use it as-is. */
+  --color-coral-text: #ff8f6b;
+  --color-coral-display: #ff8f6b;
   --color-green: #3ed98a;
   --shadow-card: 0 6px 20px rgb(0 0 0 / 0.4);
 }
