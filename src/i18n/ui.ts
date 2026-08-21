@@ -27,7 +27,7 @@ export const ui = {
 
         "about.title": "About Me",
         "about.text":
-            "I'm a Full Stack Developer who thrives on exploring cutting-edge open source technologies with vibrant communities. Now working as a Software Engineer at Deutsche Telekom, I'm diving deep into Go while leveraging my strong Python foundation. I'm drawn to tools like Deno and Svelte because of their innovative approaches and active developer ecosystems.",
+            "I'm a Full Stack Developer working as a Software Engineer at Deutsche Telekom, where I build backend services with Java and Spring Boot, work with a hint of Go, get hands-on with DevOps practices, and mentor a trainee. In my free time, I like to explore Go and Python, and enjoy self-hosting my own services.",
         "about.bridge":
             "The same instinct that has me chasing new frameworks shows up off-screen too, whether that means hiking a new trail, learning a new deck, or dialing in a new brew.",
         "about.fact.location": "Location",
@@ -35,7 +35,7 @@ export const ui = {
         "about.fact.role": "Currently",
         "about.fact.roleValue": "Software Engineer, Deutsche Telekom",
         "about.fact.focus": "Focus",
-        "about.fact.focusValue": "Go · Svelte · Deno",
+        "about.fact.focusValue": "Go · Java · Python",
         "about.fact.grad": "Graduated",
         "about.fact.gradValue": "March 2026",
         "about.hobby1.title": "Coffee",
@@ -45,6 +45,8 @@ export const ui = {
         "about.hobby3.title": "Trading Card Games",
         "about.hobby3.text":
             'Deep into Commander deckbuilding. <a class="font-semibold text-coral-text" href="#projects">See below ↓</a>',
+        "about.hobby4.title": "Self-Hosting",
+        "about.hobby4.text": "Running my own services at home, from media to monitoring.",
 
         "skills.title": "Skills",
         "skills.favoriteTools": "Daily Drivers",
@@ -84,7 +86,7 @@ export const ui = {
 
         "about.title": "Über mich",
         "about.text":
-            "Ich bin Full-Stack-Entwickler und begeistere mich für moderne Open-Source-Technologien mit aktiven Communities. Ich arbeite jetzt als Software Engineer bei der Deutschen Telekom, wo ich mich intensiv mit Go beschäftige und dabei auf meine soliden Python-Kenntnisse zurückgreife. Tools wie Deno und Svelte begeistern mich durch ihre innovativen Ansätze und aktiven Communities.",
+            "Ich bin Full-Stack-Entwickler und arbeite als Software Engineer bei der Deutschen Telekom, wo ich Backend-Services mit Java und Spring Boot entwickle, mich mit einem Schuss Go beschäftige, DevOps-Praktiken anwende und einen Auszubildenden betreue. In meiner Freizeit beschäftige ich mich gerne mit Go und Python und betreibe eigene Self-Hosting-Projekte.",
         "about.bridge":
             "Der gleiche Antrieb, der mich neue Frameworks entdecken lässt, zeigt sich auch abseits des Bildschirms: beim Wandern, beim Kartenspiel oder beim perfekten Kaffee.",
         "about.fact.location": "Standort",
@@ -92,7 +94,7 @@ export const ui = {
         "about.fact.role": "Aktuell",
         "about.fact.roleValue": "Software Engineer, Deutsche Telekom",
         "about.fact.focus": "Fokus",
-        "about.fact.focusValue": "Go · Svelte · Deno",
+        "about.fact.focusValue": "Go · Java · Python",
         "about.fact.grad": "Abschluss",
         "about.fact.gradValue": "März 2026",
         "about.hobby1.title": "Kaffee",
@@ -102,6 +104,8 @@ export const ui = {
         "about.hobby3.title": "Sammelkartenspiele",
         "about.hobby3.text":
             'Tief im Commander-Deckbuilding. <a class="font-semibold text-coral-text" href="#projects">Siehe unten ↓</a>',
+        "about.hobby4.title": "Self-Hosting",
+        "about.hobby4.text": "Betreibe eigene Dienste zuhause, von Medien bis Monitoring.",
 
         "skills.title": "Skills",
         "skills.favoriteTools": "Bevorzugte Tools",

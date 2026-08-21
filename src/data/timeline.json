@@ -15,6 +15,22 @@
         "company": {
             "en": "Deutsche Telekom IT GmbH, Darmstadt",
             "de": "Deutsche Telekom IT GmbH, Darmstadt"
+        },
+        "highlights": {
+            "en": [
+                "Designing and building robust backend services and microservices with Java and Spring Boot.",
+                "Contributing to agile development within a scaled LeSS (Large-Scale Scrum) framework.",
+                "Implementing and deploying REST APIs, integrating them into the existing system landscape.",
+                "Maintaining code quality through automated testing and collaborative code reviews.",
+                "Mentoring a trainee, dedicating regular time to support their learning and growth."
+            ],
+            "de": [
+                "Entwicklung und Aufbau robuster Backend-Services und Microservices mit Java und Spring Boot.",
+                "Mitwirkung an der agilen Entwicklung innerhalb eines skalierten LeSS-Frameworks (Large-Scale Scrum).",
+                "Implementierung und Bereitstellung von REST-APIs sowie deren Integration in die bestehende Systemlandschaft.",
+                "Sicherstellung der Codequalität durch automatisierte Tests und gemeinsame Code-Reviews.",
+                "Betreuung eines Auszubildenden, mit regelmäßiger Zeit für Unterstützung und Förderung."
+            ]
         }
     },
     {
@@ -33,6 +49,20 @@
         "company": {
             "en": "Deutsche Telekom AG, Darmstadt",
             "de": "Deutsche Telekom AG, Darmstadt"
+        },
+        "highlights": {
+            "en": [
+                "Continuously contributed to development projects, including between theory phases.",
+                "Extended the backend unit-test suite for MagentaTV to improve maintainability.",
+                "Evaluated and introduced Playwright as an end-to-end testing framework, including tool selection and best practices, and implemented automated E2E tests for a web portal.",
+                "Worked agile using Scrum (sprint planning, reviews, retrospectives) and modern DevOps practices (CI/CD, containerization)."
+            ],
+            "de": [
+                "Kontinuierliche Mitarbeit an Entwicklungsprojekten, auch zwischen den Theoriephasen.",
+                "Erweiterung der Backend-Unit-Test-Suite für MagentaTV zur Verbesserung der Wartbarkeit.",
+                "Evaluierung und Einführung von Playwright als End-to-End-Testframework, inklusive Toolauswahl und Best Practices, sowie Implementierung automatisierter E2E-Tests für ein Webportal.",
+                "Agiles Arbeiten mit Scrum (Sprint Planning, Reviews, Retrospektiven) und modernen DevOps-Praktiken (CI/CD, Containerisierung)."
+            ]
         }
     },
     {
@@ -51,6 +81,14 @@
         "company": {
             "en": "Hochschule Darmstadt",
             "de": "Hochschule Darmstadt"
+        },
+        "detail_label": {
+            "en": "GPA (German scale):",
+            "de": "Abschlussnote:"
+        },
+        "detail": {
+            "en": "2.2",
+            "de": "2,2"
         }
     },
     {
@@ -67,8 +105,16 @@
             "de": "B.Sc. Angewandte Informatik"
         },
         "company": {
-            "en": "Hochschule Mainz",
-            "de": "Hochschule Mainz"
+            "en": "Hochschule Mainz (no degree; transferred to Darmstadt)",
+            "de": "Hochschule Mainz (ohne Abschluss; Wechsel nach Darmstadt)"
+        },
+        "detail_label": {
+            "en": "GPA (German scale):",
+            "de": "Notendurchschnitt:"
+        },
+        "detail": {
+            "en": "2.0",
+            "de": "2,0"
         }
     },
     {
@@ -81,12 +127,20 @@
             "de": "Aug 2018 - Jul 2020"
         },
         "title": {
-            "en": "Advanced Technical College Entrance Qualification",
-            "de": "Fachhochschulreife"
+            "en": "Fachhochschulreife in Technical Computer Science",
+            "de": "Fachhochschulreife mit Schwerpunkt Technische Informatik"
         },
         "company": {
             "en": "Realschule Plus und Fachoberschule Mendig",
             "de": "Realschule Plus und Fachoberschule Mendig"
+        },
+        "detail_label": {
+            "en": "GPA (German scale):",
+            "de": "Abschlussnote:"
+        },
+        "detail": {
+            "en": "2.1",
+            "de": "2,1"
         }
     }
 ]

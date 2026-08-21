@@ -7,6 +7,11 @@ const localized = z.object({
     de: z.string(),
 });
 
+const localizedList = z.object({
+    en: z.array(z.string()),
+    de: z.array(z.string()),
+});
+
 const projects = defineCollection({
     loader: file("src/data/projects.json"),
     schema: z.object({
@@ -34,6 +39,9 @@ const timeline = defineCollection({
         title: localized,
         company: localized,
         milestone: localized.optional(),
+        highlights: localizedList.optional(),
+        detail_label: localized.optional(),
+        detail: localized.optional(),
     }),
 });
 

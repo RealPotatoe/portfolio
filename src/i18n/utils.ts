@@ -21,6 +21,6 @@ export function localizePath(path: string, lang: Lang): string {
 }
 
 /** Picks the right translation off a `{ en, de }` content-collection field. */
-export function pick(field: Record<string, string>, lang: Lang): string {
+export function pick<T>(field: Record<string, T>, lang: Lang): T {
     return field[lang] ?? field[defaultLang];
 }

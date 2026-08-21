@@ -37,6 +37,7 @@ const hobbies = [
     { icon: "fa-solid fa-mug-hot", title: t("about.hobby1.title"), text: t("about.hobby1.text") },
     { icon: "fa-solid fa-mountain", title: t("about.hobby2.title"), text: t("about.hobby2.text") },
     { icon: "fa-solid fa-dragon", title: t("about.hobby3.title"), text: t("about.hobby3.text") },
+    { icon: "fa-solid fa-server", title: t("about.hobby4.title"), text: t("about.hobby4.text") },
 ];
 ---
 
@@ -72,7 +73,7 @@ const hobbies = [
             </aside>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-3">
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
             {
                 hobbies.map((hobby) => (
                     <div class="rounded-md border border-edge bg-surface p-6 text-center shadow-card">
