@@ -14,9 +14,6 @@ concurrency:
 permissions:
   contents: read
 
-env:
-  BUN_VERSION: 1.4.0
-
 jobs:
   build:
     name: Build & type check
@@ -24,9 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Bun version comes from the "packageManager" field in package.json,
+      # so local and CI stay on one version and Renovate can bump it in one place.
       - uses: oven-sh/setup-bun@v2
         with:
-          bun-version: ${{ env.BUN_VERSION }}
+          bun-version-file: package.json
 
       # --frozen-lockfile fails if bun.lock is out of sync with package.json
       - name: Install dependencies
