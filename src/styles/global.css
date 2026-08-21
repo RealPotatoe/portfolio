@@ -149,6 +149,44 @@ html[data-theme="dark"] {
     }
 }
 
+/* --- Theme switch: circular reveal from the toggle button ------------------
+ The toggle drives this with the View Transitions API (see ThemeToggle.svelte):
+ it animates clip-path on whichever snapshot sits on top. The default UA
+ cross-fade is removed so only the circle is visible. Browsers without support
+ just swap the theme instantly. */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+/* Switching to light: the new (light) theme is clipped in over the dark one. */
+html[data-theme-transition="in"]::view-transition-old(root) {
+    z-index: 0;
+}
+
+html[data-theme-transition="in"]::view-transition-new(root) {
+    z-index: 1;
+    /* Start clipped away: without this the new snapshot is fully painted for
+     one frame before the JS animation's first tick (dark flash). */
+    clip-path: circle(0px at var(--theme-switch-x, 50%) var(--theme-switch-y, 50%));
+}
+
+/* Switching to dark: the light snapshot stays on top and collapses away. */
+html[data-theme-transition="out"]::view-transition-old(root) {
+    z-index: 1;
+}
+
+html[data-theme-transition="out"]::view-transition-new(root) {
+    z-index: 0;
+}
+
+/* The live document is what shows through the circle, so its own colour
+ transition would fight the reveal — freeze it while the circle runs. */
+html[data-theme-transition] body {
+    transition: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .reveal {
         opacity: 1;
