@@ -10,33 +10,51 @@
   "prConcurrentLimit": 5,
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 5am on monday"]
+    "schedule": [
+      "before 5am on monday"
+    ]
   },
   "packageRules": [
     {
-      "description": "Astro core and its integrations move together, so update them in one PR",
+      "description": "Astro and its integrations",
       "groupName": "astro",
-      "matchPackageNames": ["astro", "@astrojs/**"]
+      "matchPackageNames": [
+        "astro"
+      ],
+      "matchPackagePrefixes": [
+        "@astrojs/"
+      ]
     },
     {
-      "description": "Tailwind and its Vite plugin are version-locked to each other",
+      "description": "Tailwind and its plugins",
       "groupName": "tailwind",
-      "matchPackageNames": ["tailwindcss", "@tailwindcss/**"]
+      "matchPackageNames": [
+        "tailwindcss",
+        "@tailwindcss/**"
+      ]
     },
     {
-      "description": "Group GitHub Actions bumps into a single PR",
+      "description": "GitHub Actions",
       "groupName": "github-actions",
-      "matchManagers": ["github-actions"]
+      "matchManagers": [
+        "github-actions"
+      ]
     },
     {
-      "description": "Auto-merge low-risk devDependency patches once CI passes",
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["patch"],
+      "description": "Auto-merge devDependency patches",
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "automerge": true
     },
     {
-      "description": "Mirror the peerDependencies range declared by @astrojs/check ('^5.0.0 || ^6.0.0'). TypeScript 7 dropped the programmatic compiler API that astro check needs, and neither Bun nor Renovate enforces peer ranges, so without this Renovate would keep proposing TS 7 and breaking `bun run check`. Widen this when @astrojs/check widens its peer range (expected once TS 7.1 restores the API).",
-      "matchPackageNames": ["typescript"],
+      "description": "Matches the peer range of @astrojs/check, which TypeScript 7 breaks",
+      "matchPackageNames": [
+        "typescript"
+      ],
       "allowedVersions": "^5.0.0 || ^6.0.0"
     }
   ]
