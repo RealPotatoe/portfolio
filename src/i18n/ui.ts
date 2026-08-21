@@ -12,7 +12,7 @@ export const ui = {
     'title': 'Moritz Bengel | Full Stack Developer',
     'meta.description': 'Moritz Bengel is a Full Stack Developer based in Darmstadt, Germany.',
     'skip': 'Skip to content',
-    'nav.home': 'Moritz Bengel, back to home',
+    'nav.home': 'MB, Moritz Bengel, back to home',
     'lang.label': 'Language',
     'theme.label': 'Toggle dark mode',
 
@@ -69,7 +69,7 @@ export const ui = {
     'title': 'Moritz Bengel | Full-Stack-Entwickler',
     'meta.description': 'Moritz Bengel ist Full-Stack-Entwickler aus Darmstadt, Deutschland.',
     'skip': 'Zum Inhalt springen',
-    'nav.home': 'Moritz Bengel, zur Startseite',
+    'nav.home': 'MB, Moritz Bengel, zur Startseite',
     'lang.label': 'Sprache',
     'theme.label': 'Dunkelmodus umschalten',
 
