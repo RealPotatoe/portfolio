@@ -8,6 +8,8 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+const resumeHref = lang === "de" ? "/lebenslauf-moritz-bengel.pdf" : "/resume-moritz-bengel.pdf";
 ---
 
 <section
@@ -35,7 +37,9 @@ const t = useTranslations(lang);
                     {t("hero.cta")}
                 </a>
                 <a
-                    href="#"
+                    href={resumeHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 rounded-sm border border-edge px-6 py-3.5 text-base font-semibold text-ink transition-all duration-200 hover:border-coral hover:text-coral-text"
                 >
                     <i class="fa-solid fa-arrow-down"></i>
