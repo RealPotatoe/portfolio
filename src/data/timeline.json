@@ -5,8 +5,8 @@
     "icon": "fa-solid fa-briefcase",
     "current": true,
     "date": {
-      "en": "Apr 2026 — Present",
-      "de": "Apr 2026 — heute"
+      "en": "Apr 2026 - Present",
+      "de": "Apr 2026 - heute"
     },
     "title": {
       "en": "Software Engineer",
@@ -27,8 +27,8 @@
     "icon": "fa-solid fa-briefcase",
     "current": false,
     "date": {
-      "en": "Aug 2022 — Mar 2026",
-      "de": "Aug 2022 — Mär 2026"
+      "en": "Aug 2022 - Mar 2026",
+      "de": "Aug 2022 - Mär 2026"
     },
     "title": {
       "en": "Dual Student Computer Science",
@@ -45,12 +45,12 @@
     "icon": "fa-solid fa-graduation-cap",
     "current": false,
     "date": {
-      "en": "Aug 2022 — Mar 2026",
-      "de": "Aug 2022 — Mär 2026"
+      "en": "Aug 2022 - Mar 2026",
+      "de": "Aug 2022 - Mär 2026"
     },
     "title": {
-      "en": "B.Sc. Computer Science — Dual Program",
-      "de": "B.Sc. Informatik — Duales Studium"
+      "en": "B.Sc. Computer Science - Dual Program",
+      "de": "B.Sc. Informatik - Duales Studium"
     },
     "company": {
       "en": "Hochschule Darmstadt",
@@ -63,8 +63,8 @@
     "icon": "fa-solid fa-graduation-cap",
     "current": false,
     "date": {
-      "en": "Oct 2020 — Mar 2022",
-      "de": "Okt 2020 — Mär 2022"
+      "en": "Oct 2020 - Mar 2022",
+      "de": "Okt 2020 - Mär 2022"
     },
     "title": {
       "en": "B.Sc. Applied Computer Science",
@@ -81,8 +81,8 @@
     "icon": "fa-solid fa-graduation-cap",
     "current": false,
     "date": {
-      "en": "Aug 2018 — Jul 2020",
-      "de": "Aug 2018 — Jul 2020"
+      "en": "Aug 2018 - Jul 2020",
+      "de": "Aug 2018 - Jul 2020"
     },
     "title": {
       "en": "Advanced Technical College Entrance Qualification",

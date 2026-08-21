@@ -9,10 +9,10 @@ export type Lang = keyof typeof languages;
 
 export const ui = {
   en: {
-    'title': 'Moritz Bengel — Full Stack Developer',
-    'meta.description': 'Moritz Bengel — Full Stack Developer based in Darmstadt, Germany.',
+    'title': 'Moritz Bengel | Full Stack Developer',
+    'meta.description': 'Moritz Bengel is a Full Stack Developer based in Darmstadt, Germany.',
     'skip': 'Skip to content',
-    'nav.home': 'Moritz Bengel — home',
+    'nav.home': 'Moritz Bengel, back to home',
     'lang.label': 'Language',
     'theme.label': 'Toggle dark mode',
 
@@ -29,7 +29,7 @@ export const ui = {
     'about.text':
       "I'm a Full Stack Developer who thrives on exploring cutting-edge open source technologies with vibrant communities. Currently pursuing my Computer Science degree while working at Deutsche Telekom, I'm diving deep into Go while leveraging my strong Python foundation. I'm drawn to tools like Deno and Svelte because of their innovative approaches and active developer ecosystems.",
     'about.bridge':
-      'The same instinct that has me chasing new frameworks shows up off-screen too — hiking a new trail, learning a new deck, or dialing in a new brew.',
+      'The same instinct that has me chasing new frameworks shows up off-screen too, whether that means hiking a new trail, learning a new deck, or dialing in a new brew.',
     'about.fact.location': 'Location',
     'about.fact.locationValue': 'Darmstadt, DE',
     'about.fact.role': 'Currently',
@@ -43,7 +43,7 @@ export const ui = {
     'about.hobby2.title': 'Hiking',
     'about.hobby2.text': 'Happiest on a trail, rain or shine.',
     'about.hobby3.title': 'Trading Card Games',
-    'about.hobby3.text': 'Deep into Commander deckbuilding — <a class="font-semibold text-coral" href="#projects">see below ↓</a>',
+    'about.hobby3.text': 'Deep into Commander deckbuilding. <a class="font-semibold text-coral" href="#projects">See below ↓</a>',
 
     'skills.title': 'Skills',
     'skills.favoriteTools': 'Daily Drivers',
@@ -60,16 +60,16 @@ export const ui = {
     'contact.title': 'Contact Me',
     'contact.text': 'You can reach me via email or find me on social media.',
     'contact.button': 'Email Me',
-    'contact.signoff': "Say hi — I don't bite ☕",
+    'contact.signoff': "Say hi, I don't bite ☕",
 
     'footer.location': 'Based in Darmstadt, Germany',
     'footer.copyright': 'Moritz Bengel • Crafted with ❤️ and ☕',
   },
   de: {
-    'title': 'Moritz Bengel — Full-Stack-Entwickler',
-    'meta.description': 'Moritz Bengel — Full-Stack-Entwickler aus Darmstadt, Deutschland.',
+    'title': 'Moritz Bengel | Full-Stack-Entwickler',
+    'meta.description': 'Moritz Bengel ist Full-Stack-Entwickler aus Darmstadt, Deutschland.',
     'skip': 'Zum Inhalt springen',
-    'nav.home': 'Moritz Bengel — Startseite',
+    'nav.home': 'Moritz Bengel, zur Startseite',
     'lang.label': 'Sprache',
     'theme.label': 'Dunkelmodus umschalten',
 
@@ -86,7 +86,7 @@ export const ui = {
     'about.text':
       'Ich bin Full-Stack-Entwickler und begeistere mich für moderne Open-Source-Technologien mit aktiven Communities. Derzeit studiere ich Informatik und arbeite bei der Deutschen Telekom, wo ich mich intensiv mit Go beschäftige und dabei auf meine soliden Python-Kenntnisse zurückgreife. Tools wie Deno und Svelte begeistern mich durch ihre innovativen Ansätze und aktiven Communities.',
     'about.bridge':
-      'Der gleiche Antrieb, der mich neue Frameworks entdecken lässt, zeigt sich auch abseits des Bildschirms — beim Wandern, beim Kartenspiel oder beim perfekten Kaffee.',
+      'Der gleiche Antrieb, der mich neue Frameworks entdecken lässt, zeigt sich auch abseits des Bildschirms: beim Wandern, beim Kartenspiel oder beim perfekten Kaffee.',
     'about.fact.location': 'Standort',
     'about.fact.locationValue': 'Darmstadt, DE',
     'about.fact.role': 'Aktuell',
@@ -100,7 +100,7 @@ export const ui = {
     'about.hobby2.title': 'Wandern',
     'about.hobby2.text': 'Am liebsten auf dem Trail, bei jedem Wetter.',
     'about.hobby3.title': 'Sammelkartenspiele',
-    'about.hobby3.text': 'Tief im Commander-Deckbuilding — <a class="font-semibold text-coral" href="#projects">siehe unten ↓</a>',
+    'about.hobby3.text': 'Tief im Commander-Deckbuilding. <a class="font-semibold text-coral" href="#projects">Siehe unten ↓</a>',
 
     'skills.title': 'Skills',
     'skills.favoriteTools': 'Bevorzugte Tools',
@@ -117,7 +117,7 @@ export const ui = {
     'contact.title': 'Kontakt',
     'contact.text': 'Du erreichst mich per E-Mail oder über soziale Medien.',
     'contact.button': 'E-Mail senden',
-    'contact.signoff': 'Schreib mir — ich beiße nicht ☕',
+    'contact.signoff': 'Schreib mir, ich beiße nicht ☕',
 
     'footer.location': 'Ansässig in Darmstadt, Deutschland',
     'footer.copyright': 'Moritz Bengel • Mit ❤️ und ☕ gemacht',
