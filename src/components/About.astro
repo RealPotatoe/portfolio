@@ -73,13 +73,20 @@ const hobbies = [
             </aside>
         </div>
 
-        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+        <div class="stretch grid gap-6 sm:grid-cols-2 md:grid-cols-4">
             {
                 hobbies.map((hobby) => (
-                    <div class="rounded-md border border-edge bg-surface p-6 text-center shadow-card">
-                        <i class={`${hobby.icon} mb-3 text-2xl text-coral`} />
-                        <h3 class="mb-2 font-display text-lg font-semibold">{hobby.title}</h3>
-                        <p class="text-sm text-slate" set:html={hobby.text} />
+                    <div class="flex h-full flex-col items-center rounded-md border border-edge bg-surface p-6 text-center shadow-card">
+                        <div class="flex flex-col items-center">
+                            <i class={`${hobby.icon} mb-2 text-2xl text-coral`} />
+                            <h3 class="flex min-h-14 items-center justify-center font-display text-lg font-semibold">
+                                {hobby.title}
+                            </h3>
+                        </div>
+
+                        <div class="flex grow items-center justify-center">
+                            <p class="text-sm text-slate" set:html={hobby.text} />
+                        </div>
                     </div>
                 ))
             }
