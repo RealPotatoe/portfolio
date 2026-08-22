@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: Moritz Bengel
+Site: https://mbengel.dev
+Contact: contact@mbengel.dev
+
+/* SITE */
+Language: English, German
+
+/* TECHNOLOGY */
+Astro
+Svelte
+Tailwind CSS
+GitHub Pages

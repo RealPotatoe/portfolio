@@ -1,0 +1,19 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://mbengel.dev/sitemap-index.xml
