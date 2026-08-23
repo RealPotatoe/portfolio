@@ -9,6 +9,10 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+const ogLocale = lang === "de" ? "de_DE" : "en_US";
+const ogLocaleAlternate = lang === "de" ? "en_US" : "de_DE";
 ---
 
 <!doctype html>
@@ -21,9 +25,39 @@ const t = useTranslations(lang);
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link type="text/plain" rel="author" href="https://mbengel.dev/humans.txt" />
+        <meta name="author" content="Moritz Bengel" />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="theme-color" content="#fff5ee" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1c1917" media="(prefers-color-scheme: dark)" />
+        <link rel="canonical" href={canonicalURL} />
 
         <link rel="alternate" hreflang="en" href={new URL("/", Astro.site ?? Astro.url)} />
         <link rel="alternate" hreflang="de" href={new URL("/de/", Astro.site ?? Astro.url)} />
+        <link rel="alternate" hreflang="x-default" href={new URL("/", Astro.site ?? Astro.url)} />
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Moritz Bengel" />
+        <meta property="og:title" content={t("title")} />
+        <meta property="og:description" content={t("meta.description")} />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:locale" content={ogLocale} />
+        <meta property="og:locale:alternate" content={ogLocaleAlternate} />
+        <!--
+        <meta property="og:image" content={new URL("/og-image.png", Astro.site ?? Astro.url)} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={t("title")} />
+        -->
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t("title")} />
+        <meta name="twitter:description" content={t("meta.description")} />
+        <!--
+        <meta name="twitter:image" content={new URL("/og-image.png", Astro.site ?? Astro.url)} />
+        -->
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

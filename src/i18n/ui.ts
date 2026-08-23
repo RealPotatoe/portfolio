@@ -10,7 +10,8 @@ export type Lang = keyof typeof languages;
 export const ui = {
     en: {
         title: "Moritz Bengel | Full Stack Developer",
-        "meta.description": "Moritz Bengel is a Full Stack Developer based in Darmstadt, Germany.",
+        "meta.description":
+            "Full Stack Developer based in Darmstadt, Germany. I build backend services in Java, Go, and Python, and self-host everything I can. Explore my projects.",
         skip: "Skip to content",
         "nav.home": "MB, Moritz Bengel, back to home",
         "lang.label": "Language",
@@ -68,7 +69,8 @@ export const ui = {
     },
     de: {
         title: "Moritz Bengel | Full-Stack-Entwickler",
-        "meta.description": "Moritz Bengel ist Full-Stack-Entwickler aus Darmstadt, Deutschland.",
+        "meta.description":
+            "Full-Stack-Entwickler aus Darmstadt, Deutschland. Ich entwickle Backend-Services in Java, Go und Python und hoste möglichst viel selbst. Entdecke meine Projekte.",
         skip: "Zum Inhalt springen",
         "nav.home": "MB, Moritz Bengel, zur Startseite",
         "lang.label": "Sprache",
