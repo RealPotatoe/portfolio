@@ -21,6 +21,7 @@ Personal portfolio. Static, bilingual (EN/DE).
 | `bun run format`       | Format with Prettier                  |
 | `bun run format:check` | Verify formatting, same check CI runs |
 | `bun run lighthouse`   | Build and audit with Lighthouse CI    |
+| `bun run icons`        | Regenerate favicon & app iconset      |
 
 ## Structure
 
@@ -44,3 +45,12 @@ Astro i18n with `prefixDefaultLocale: false`. English served from `/`, German fr
 - TypeScript pinned to v6. Version 7 dropped the programmatic compiler API that
   `astro check` needs.
 - CI runs format check, type check, build, then a Lighthouse audit of both locales.
+
+## Favicons
+
+Favicon assets in `public/` are generated from the **Fraunces SemiBold** font glyph using `scripts/generate-favicons.sh`.
+
+```bash
+# Requires fonttools (pip install fonttools) and ImageMagick (magick)
+bun run icons
+```

@@ -15,7 +15,8 @@
         "check": "astro check",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
-        "lighthouse": "astro build && lhci autorun"
+        "lighthouse": "astro build && lhci autorun",
+        "icons": "./scripts/generate-favicons.sh"
     },
     "dependencies": {
         "@astrojs/sitemap": "^3.7.3",
