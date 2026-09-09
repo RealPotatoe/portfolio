@@ -1,19 +1,19 @@
 [
     {
-        "id": "deckbuilder",
+        "id": "gicisky-296-bwry",
         "order": 1,
-        "icon": "fa-solid fa-robot",
-        "tags": ["Python", "LLM Agents", "Scryfall API", "SSE"],
+        "icon": "fa-solid fa-microchip",
+        "tags": ["Python", "BLE", "Bleak", "Async", "IoT"],
         "title": {
-            "en": "EDH Deckbuilder Agent",
-            "de": "EDH Deckbuilder Agent"
+            "en": "Gicisky BWRY E-Paper Driver",
+            "de": "Gicisky BWRY E-Paper-Treiber"
         },
         "text": {
-            "en": "A Python AI agent that automates Magic: The Gathering Commander deckbuilding. It talks to a self-hosted LLM over an OpenAI-compatible endpoint, pulls live card data and pricing from the Scryfall API, and streams its reasoning back over SSE while respecting budget constraints and commander legality.",
-            "de": "Ein Python-KI-Agent, der das Deckbuilding für Magic: The Gathering Commander automatisiert. Er kommuniziert mit einem selbst gehosteten LLM über eine OpenAI-kompatible Schnittstelle, ruft Kartendaten und Preise live über die Scryfall-API ab und streamt seine Überlegungen per SSE, unter Berücksichtigung von Budget und Commander-Legalität."
+            "en": "An open-source Python BLE driver for the Gicisky/PICKSMART 2.9\" 296x128 BWRY e-paper display, published on PyPI. Implements the vendor GATT protocol end-to-end, block-size negotiation, chunked image transfer with retries, and connection lifecycle management, behind a hardened async API validated with mocked BLE hardware in CI.",
+            "de": "Ein Open-Source-Python-BLE-Treiber für das Gicisky/PICKSMART 2,9\"-296x128-BWRY-E-Paper-Display, veröffentlicht auf PyPI. Er implementiert das herstellerspezifische GATT-Protokoll vollständig: Blockgrößen-Aushandlung, blockweise Bildübertragung mit Wiederholungen und Verbindungs-Lifecycle-Management, hinter einer robusten asynchronen API, die per CI mit gemockter BLE-Hardware getestet wird."
         },
         "link": {
-            "href": "https://github.com/RealPotatoe",
+            "href": "https://github.com/RealPotatoe/gicisky-296-bwry",
             "kind": "code"
         }
     },
